@@ -1,0 +1,12 @@
+{
+  "name": "xuner-chatbot",
+  "version": "1.0.0",
+  "description": "🌸 熏儿 — AI聊天机器人",
+  "scripts": {
+    "build": "cd backend && npm install",
+    "start": "cd backend && node src/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
