@@ -10,6 +10,7 @@ const { initDatabase } = require('./models/database');
 const chatRoutes = require('./routes/chat');
 const uploadRoutes = require('./routes/upload');
 const memoryRoutes = require('./routes/memory');
+const openaiRoutes = require('./routes/openai');
 
 const app = express();
 
@@ -32,6 +33,7 @@ app.use('/uploads', express.static(path.join(__dirname, '..', 'uploads')));
 app.use('/api/chat', chatRoutes);
 app.use('/api/upload', uploadRoutes);
 app.use('/api/memories', memoryRoutes);
+app.use('/v1', openaiRoutes);
 
 // ── 健康检查 ──
 app.get('/api/health', (_req, res) => {
